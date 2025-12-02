@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { Sparkles, Zap, TrendingUp, Users, Clock, Target } from "lucide-react";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 export default function LandingPage() {
   const navigate = useNavigate();
@@ -14,6 +16,7 @@ export default function LandingPage() {
 
   return (
     <div className="min-h-screen bg-linear-to-br from-black via-[#0A0A1E] to-[#1A0938] overflow-hidden">
+      <Navbar />
       {/*Background Elements */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-900/10 rounded-full blur-3xl"></div> {/*Cosmic background */}
@@ -244,6 +247,7 @@ export default function LandingPage() {
           background-size: 200% 200%;
         }
       `}</style>
+      <Footer />
     </div>
   );
 }
