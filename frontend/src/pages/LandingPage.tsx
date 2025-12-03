@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { Sparkles, Zap, TrendingUp, Users, Clock, Target } from "lucide-react";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import Navbar from "../components/layout/Navbar";
+import Footer from "../components/layout/Footer";
 
 export default function LandingPage() {
   const navigate = useNavigate();
@@ -52,7 +52,7 @@ export default function LandingPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 backdrop-blur-md border border-white/10 mb-8"
+            className="inline-flex items-center gap-2 mt-25 xl:mt-15 px-4 py-2 rounded-full bg-white/5 backdrop-blur-md border border-white/10 mb-8"
           >
             <Sparkles className="w-4 h-4 text-[#7B5DFF]" />
             <span className="text-sm font-medium text-white">
@@ -106,7 +106,7 @@ export default function LandingPage() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => navigate("/signup")}
+              onClick={() => navigate("/preview")}
               className="group px-8 py-4 rounded-xl cursor-pointer
                 bg-linear-to-r from-[#7B5DFF] to-[#3EC8FF]
                 text-white font-semibold text-lg
